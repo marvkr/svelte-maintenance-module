@@ -25,3 +25,12 @@ vite.config.ts.timestamp-*
 
 # SQLite
 *.db
+
+# Platform-specific dependencies
+**/node_modules/@rollup/rollup-*
+
+# Package manager
+pnpm-lock.yaml
+.pnpm-store/
+.npm
+.pnpm-debug.log
