@@ -30,7 +30,7 @@ vite.config.ts.timestamp-*
 **/node_modules/@rollup/rollup-*
 
 # Package manager
-pnpm-lock.yaml
-.pnpm-store/
+# npm
+package-lock.json
 .npm
-.pnpm-debug.log
+npm-debug.log*
