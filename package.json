@@ -1,12 +1,10 @@
 {
-	"name": "cocktailanddinner-web-app",
+	"name": "svelte-maintenance-module",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"prepack": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"db:push": "drizzle-kit push",
@@ -15,11 +13,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
-	],
+	"files": [],
 	"sideEffects": [
 		"**/*.css"
 	],
@@ -67,6 +61,7 @@
 	},
 	"dependencies": {
 		"@libsql/client": "^0.14.0",
+		"@sveltejs/kit": "^2.16.1",
 		"carbon-components-svelte": "0.87.2",
 		"dotenv": "^16.4.7",
 		"drizzle-orm": "^0.38.4",
