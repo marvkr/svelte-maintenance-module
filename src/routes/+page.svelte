@@ -4,6 +4,7 @@
 	import '@carbon/charts/styles.css';
 	import { ArrowUp, ArrowDown } from 'carbon-icons-svelte';
 	import type { MaintenanceStats, MaintenanceByType, MonthlyTrend } from '$lib/server/db/schema';
+	import { ScaleTypes } from '@carbon/charts';
 
 	let maintenanceStats = $state<MaintenanceStats | null>(null);
 	let pieData = $state([]);
@@ -53,13 +54,13 @@
 			left: {
 				mapsTo: 'value',
 				title: 'Tasks',
-				scaleType: 'linear',
+				scaleType: ScaleTypes.LINEAR,
 				includeZero: true
 			},
 			bottom: {
 				mapsTo: 'group',
 				title: 'Month',
-				scaleType: 'labels'
+				scaleType: ScaleTypes.LABELS
 			}
 		},
 		data: {

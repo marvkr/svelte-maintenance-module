@@ -79,7 +79,6 @@
 		<InlineLoading description="Loading records..." />
 	{:else}
 		<DataTable
-			{headers}
 			{rows}
 			sortable
 			zebra
